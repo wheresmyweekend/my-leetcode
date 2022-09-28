@@ -1,6 +1,6 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        #Create the hashsets for rows, cols, sections
+        # Create the hashsets for rows, cols, sections
         rows = defaultdict(set)
         cols = defaultdict(set)
         sections = defaultdict(set) # key is (r/3,c/3)

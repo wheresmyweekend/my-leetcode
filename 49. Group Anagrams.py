@@ -3,8 +3,8 @@ class Solution:
         ans = defaultdict(list)
 
         for word in strs:
-            charCount = [0] * 26 
+            charCount = [0] * 26 # Creates a list of 26 zeros to count alphabets in word
             for char in word:
                 charCount[ord(char) - ord("a")] += 1
-            ans[tuple(charCount)].append(word)
-        return ans.values()
+            ans[tuple(charCount)].append(word) # Appends word to hashmap key of same alphabet signature
+        return ans.values() 
