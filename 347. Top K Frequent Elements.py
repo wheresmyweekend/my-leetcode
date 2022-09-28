@@ -1,4 +1,4 @@
- class Solution:
+class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         count = {} # make a hashmap to quantify count of each element
         freq = [[] for i in range(len(nums)+1)] # makes [[],[],[],..] based on  length of input array
