@@ -26,12 +26,14 @@ def checkInclusion(s1: str, s2: str) -> bool:
         # Adds new char from new position of r-pointer
         s2Map[s2[r]] = 1 + s2Map.get(s2[r], 0)
 
-        # Removes char on l-pointer position before shifting 1 position to right
+        # Removes char on l-pointer position
         s2Map[s2[l]] -= 1
-        l += 1
+        
         # l-pointer removes empty keys
         if s2Map[s2[l]] == 0:
             del s2Map[s2[l]]
+        # Shift l-pointer only after removing empty keys from previous position, and removing values
+        l += 1
 
         # Checks if Hashmaps match
         if s1Map == s2Map:
@@ -40,7 +42,7 @@ def checkInclusion(s1: str, s2: str) -> bool:
 
 # Testcase
 if __name__ == "__main__":
-    u = "adc"
-    s = "dcda"
+    u = "ab"
+    s = "eidbaooo"
     answer = checkInclusion(u,s)
     print(answer)
