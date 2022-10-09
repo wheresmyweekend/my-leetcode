@@ -42,7 +42,4 @@ def checkInclusion(s1: str, s2: str) -> bool:
 
 # Testcase
 if __name__ == "__main__":
-    u = "ab"
-    s = "eidbaooo"
-    answer = checkInclusion(u,s)
-    print(answer)
+    print(checkInclusion("ab", "eidobadooo"))
