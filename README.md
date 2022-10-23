@@ -1,3 +1,3 @@
 ## Hello!
 
-A simple repository documenting all my letcode answers and explanations for my future self.
+A simple repository documenting all my leetcode answers and explanations for my future self.
