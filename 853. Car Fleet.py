@@ -11,6 +11,7 @@ class Solution:
         #    destination before the car infront, and hence will form a fleet somewhere before the finishline. Because of this, the stack is popped to simulate the two cars travelling as a fleet as per question
         #    Since each subsequent possible fleet will be slower than the preceeding one, no need to check all fleets, just the most recent one. Hence, use stack
         for p,s in sorted(pair)[::-1]:
+            # calculates the time taken 
             stack.append((target - p) / s )
             if len(stack) >= 2 and stack[-1] <= stack[-2]:
                 stack.pop()
